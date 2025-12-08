@@ -1,0 +1,187 @@
+---
+const navItems = [
+	{ name: 'Über uns', href: '#ueber-uns' },
+	{ name: 'Portfolio', href: '#portfolio' },
+	{ name: 'Kontakt', href: '#kontakt' },
+];
+---
+
+<nav class="navigation" id="navigation">
+	<div class="nav-container">
+		<div class="logo">
+			<a href="#home">schernickau.de</a>
+		</div>
+		<ul class="nav-menu" id="nav-menu">
+			{navItems.map((item) => (
+				<li>
+					<a href={item.href} class="nav-link">{item.name}</a>
+				</li>
+			))}
+		</ul>
+		<button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
+</nav>
+
+<script>
+	const menuToggle = document.getElementById('menu-toggle');
+	const navMenu = document.getElementById('nav-menu');
+	const navLinks = document.querySelectorAll('.nav-link');
+
+	menuToggle?.addEventListener('click', () => {
+		navMenu?.classList.toggle('active');
+		menuToggle.classList.toggle('active');
+	});
+
+	// Close menu when clicking on a link
+	navLinks.forEach((link) => {
+		link.addEventListener('click', () => {
+			navMenu?.classList.remove('active');
+			menuToggle?.classList.remove('active');
+		});
+	});
+
+	// Add scroll effect to navigation
+	window.addEventListener('scroll', () => {
+		const nav = document.getElementById('navigation');
+		if (window.scrollY > 50) {
+			nav?.classList.add('scrolled');
+		} else {
+			nav?.classList.remove('scrolled');
+		}
+	});
+</script>
+
+<style>
+	.navigation {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(255, 255, 255, 0.95);
+		backdrop-filter: blur(10px);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		z-index: 1000;
+		transition: all 0.3s ease;
+	}
+
+	.navigation.scrolled {
+		background-color: rgba(255, 255, 255, 0.98);
+		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+	}
+
+	.nav-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo a {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: var(--primary-color);
+		text-decoration: none;
+		transition: color 0.3s;
+	}
+
+	.logo a:hover {
+		color: var(--accent-color);
+	}
+
+	.nav-menu {
+		display: flex;
+		list-style: none;
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.nav-link {
+		color: var(--text-color);
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.3s;
+		position: relative;
+	}
+
+	.nav-link:hover {
+		color: var(--accent-color);
+	}
+
+	.nav-link::after {
+		content: '';
+		position: absolute;
+		bottom: -5px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: var(--accent-color);
+		transition: width 0.3s;
+	}
+
+	.nav-link:hover::after {
+		width: 100%;
+	}
+
+	.menu-toggle {
+		display: none;
+		flex-direction: column;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.5rem;
+		gap: 5px;
+	}
+
+	.menu-toggle span {
+		width: 25px;
+		height: 3px;
+		background-color: var(--primary-color);
+		transition: all 0.3s;
+	}
+
+	.menu-toggle.active span:nth-child(1) {
+		transform: rotate(45deg) translate(8px, 8px);
+	}
+
+	.menu-toggle.active span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.menu-toggle.active span:nth-child(3) {
+		transform: rotate(-45deg) translate(7px, -7px);
+	}
+
+	@media (max-width: 768px) {
+		.menu-toggle {
+			display: flex;
+		}
+
+		.nav-menu {
+			position: fixed;
+			top: 70px;
+			left: -100%;
+			flex-direction: column;
+			background-color: rgba(255, 255, 255, 0.98);
+			width: 100%;
+			text-align: center;
+			transition: left 0.3s;
+			box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+			padding: 2rem 0;
+			gap: 1.5rem;
+		}
+
+		.nav-menu.active {
+			left: 0;
+		}
+
+		.nav-container {
+			padding: 1rem;
+		}
+	}
+</style>
