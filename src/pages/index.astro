@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation.astro';
 import hochzeitImage from '../assets/hochzeit.avif';
 import musikImage from '../assets/musik.avif';
 import drohneImage from '../assets/drohne.avif';
+import kameraBanner from '../assets/kamera-banner.jpg';
 ---
 
 <Layout>
@@ -92,7 +93,7 @@ import drohneImage from '../assets/drohne.avif';
 		</section>
 
 		<!-- Video Section -->
-		<section id="video" class="section">
+		<section id="video" class="section video-section">
 			<div class="container">
 				<div class="video-section-content">
 					<h2>Capturing moments, crafting your story with every frame.</h2>
@@ -100,7 +101,7 @@ import drohneImage from '../assets/drohne.avif';
 				</div>
 			</div>
 		</section>
-
+		<div class="video-banner" style={`background-image: url(${kameraBanner.src})`}></div>
 		<!-- About/Description -->
 		<section class="section bg-dark">
 			<div class="container">
@@ -252,6 +253,12 @@ import drohneImage from '../assets/drohne.avif';
 		background-color: #ffffff;
 	}
 
+	.section.video-section {
+		padding-bottom: 0;
+		margin-bottom: 0;
+		overflow: hidden;
+	}
+
 	.section.bg-dark {
 		background-color: #1a1a1a;
 		color: #ffffff;
@@ -390,6 +397,26 @@ import drohneImage from '../assets/drohne.avif';
 	.video-subtitle {
 		font-size: 1.25rem;
 		color: #666;
+	}
+
+	.video-section {
+		padding-bottom: 0 !important;
+		margin-bottom: 0;
+	}
+
+	.video-banner {
+		width: 100%;
+		height: 200px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin: 0;
+		display: block;
+	}
+
+	.section.bg-dark {
+		margin-top: 0;
+		padding-top: 5rem;
 	}
 
 	.content {
