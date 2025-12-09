@@ -1,8 +1,9 @@
 ---
 const navItems = [
-	{ name: 'Über uns', href: '#ueber-uns' },
-	{ name: 'Portfolio', href: '#portfolio' },
-	{ name: 'Kontakt', href: '#kontakt' },
+	{ name: 'Services', href: '#services' },
+	{ name: 'Gallery', href: '#gallery' },
+	{ name: 'Video', href: '#video' },
+	{ name: 'Contact Us', href: '#contact' },
 ];
 ---
 
@@ -61,16 +62,16 @@ const navItems = [
 		top: 0;
 		left: 0;
 		right: 0;
-		background-color: rgba(255, 255, 255, 0.95);
+		background-color: #000000;
 		backdrop-filter: blur(10px);
-		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 		z-index: 1000;
 		transition: all 0.3s ease;
 	}
 
 	.navigation.scrolled {
-		background-color: rgba(255, 255, 255, 0.98);
-		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+		background-color: #000000;
+		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 	}
 
 	.nav-container {
@@ -85,13 +86,13 @@ const navItems = [
 	.logo a {
 		font-size: 1.5rem;
 		font-weight: bold;
-		color: var(--primary-color);
+		color: #ffffff;
 		text-decoration: none;
 		transition: color 0.3s;
 	}
 
 	.logo a:hover {
-		color: var(--accent-color);
+		color: #cccccc;
 	}
 
 	.nav-menu {
@@ -102,7 +103,7 @@ const navItems = [
 	}
 
 	.nav-link {
-		color: var(--text-color);
+		color: #ffffff;
 		text-decoration: none;
 		font-weight: 500;
 		transition: color 0.3s;
@@ -110,7 +111,7 @@ const navItems = [
 	}
 
 	.nav-link:hover {
-		color: var(--accent-color);
+		color: #cccccc;
 	}
 
 	.nav-link::after {
@@ -120,7 +121,7 @@ const navItems = [
 		left: 0;
 		width: 0;
 		height: 2px;
-		background-color: var(--accent-color);
+		background-color: #ffffff;
 		transition: width 0.3s;
 	}
 
@@ -141,7 +142,7 @@ const navItems = [
 	.menu-toggle span {
 		width: 25px;
 		height: 3px;
-		background-color: var(--primary-color);
+		background-color: #ffffff;
 		transition: all 0.3s;
 	}
 
@@ -167,11 +168,11 @@ const navItems = [
 			top: 70px;
 			left: -100%;
 			flex-direction: column;
-			background-color: rgba(255, 255, 255, 0.98);
+			background-color: #000000;
 			width: 100%;
 			text-align: center;
 			transition: left 0.3s;
-			box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+			box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
 			padding: 2rem 0;
 			gap: 1.5rem;
 		}

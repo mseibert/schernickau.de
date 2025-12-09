@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
+import hochzeitImage from '../assets/hochzeit.avif';
+import musikImage from '../assets/musik.avif';
+import drohneImage from '../assets/drohne.avif';
 ---
 
 <Layout>
@@ -20,51 +23,127 @@ import Navigation from '../components/Navigation.astro';
 			</div>
 			<div class="hero-overlay"></div>
 			<div class="hero-content">
-				<h1>Willkommen</h1>
-				<p>Ihr Text hier</p>
+				<h1>Capturing Stories Through the Lens</h1>
+				<p>Welcome to the portfolio of a dedicated cameraman. Explore stunning visuals and storytelling that bring moments to life. Let's create captivating content together.</p>
+				<a href="#contact" class="cta-button">Contact Us</a>
 			</div>
 		</section>
 
-		<!-- Über uns -->
-		<section id="ueber-uns" class="section">
+		<!-- Services -->
+		<section id="services" class="section">
 			<div class="container">
-				<h2>Über uns</h2>
+				<h2>Unsere Dienstleistungen</h2>
+				<p class="section-intro">
+					When Ryan and Monica realized that they could watch their wedding ceremony on the livestream on the church's Youtube channel, everything else faded away as they jointly looked at Ryan's cellphone, mesmerized, holding each other during the wedding reception in the gym of the church. It was a perfect way to end a perfect day: an in-love couple enjoying the immediate playback of the events that had just transpired mere moments ago. As their photographer, I was excited to capture the moment they were entranced by their vows on the tiny screen. August 16, 2025, Pocatello, Idaho, USA.
+				</p>
+				<div class="services-grid">
+					<div class="service-card">
+						<div class="service-image">
+							<img src={hochzeitImage.src} alt="Hochzeitsvideografie" />
+						</div>
+						<h3>Hochzeitsvideografie</h3>
+						<p>Emotionale Hochzeitsvideos, die die schönsten Augenblicke Ihres großen Tages einfangen.</p>
+						<div class="service-tag">Steadicam</div>
+					</div>
+					<div class="service-card">
+						<div class="service-image">
+							<img src={musikImage.src} alt="Musikvideos" />
+						</div>
+						<h3>Musikvideos</h3>
+						<p>Innovative Musikvideos, die die Persönlichkeit und den Stil des Künstlers unterstreichen.</p>
+						<div class="service-tag">Flying DJI Mini</div>
+					</div>
+					<div class="service-card">
+						<div class="service-image">
+							<img src={drohneImage.src} alt="Luftaufnahmen mit Drohne" />
+						</div>
+						<h3>Luftaufnahmen mit Drohne</h3>
+						<p>Beeindruckende Luftaufnahmen, die einzigartige Perspektiven und Panoramaaufnahmen bieten.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gallery -->
+		<section id="gallery" class="section bg-dark">
+			<div class="container">
+				<h2>Gallery</h2>
+				<div class="gallery-grid">
+					<div class="gallery-item">
+						<div class="gallery-placeholder">selective focus photo of man holding black camera</div>
+					</div>
+					<div class="gallery-item">
+						<div class="gallery-placeholder">Empty road</div>
+					</div>
+					<div class="gallery-item">
+						<div class="gallery-placeholder">A cameraman working during the pandemic days.</div>
+					</div>
+					<div class="gallery-item">
+						<div class="gallery-placeholder">a man standing in front of a camera</div>
+					</div>
+					<div class="gallery-item">
+						<div class="gallery-placeholder">man in red crew neck t-shirt sitting on brown wooden dock during daytime</div>
+					</div>
+					<div class="gallery-item">
+						<div class="gallery-placeholder">a man holding a camera and a tripod</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Video Section -->
+		<section id="video" class="section">
+			<div class="container">
+				<div class="video-section-content">
+					<h2>Capturing moments, crafting your story with every frame.</h2>
+					<p class="video-subtitle">Discover your vision today!</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- About/Description -->
+		<section class="section bg-dark">
+			<div class="container">
+				<h2>Capturing Moments with Precision</h2>
 				<div class="content">
 					<p>
-						Ihr Text über das Unternehmen, die Philosophie, etc.
+						Discover the art of storytelling through the lens of Schernickau.de, your expert portfolio cameraman. Experience dynamic visuals that bring your vision to life. Elevate your portfolio with professional video services tailored to your needs.
 					</p>
 				</div>
 			</div>
 		</section>
 
-		<!-- Portfolio -->
-		<section id="portfolio" class="section bg-light">
+		<!-- Contact -->
+		<section id="contact" class="section">
 			<div class="container">
-				<h2>Portfolio</h2>
-				<div class="content">
-					<p>
-						Beschreibung der Projekte
-					</p>
-				</div>
-			</div>
-		</section>
-
-		<!-- Kontakt -->
-		<section id="kontakt" class="section bg-light">
-			<div class="container">
-				<h2>Kontakt</h2>
-				<div class="content">
-					<p>
-						Kontaktinformationen, etc.
-					</p>
-				</div>
+				<h2>Contact Us</h2>
+				<form class="contact-form">
+					<div class="form-group">
+						<label for="email">Email address *</label>
+						<input type="email" id="email" name="email" required />
+					</div>
+					<div class="form-group">
+						<label for="name">Name *</label>
+						<input type="text" id="name" name="name" required />
+					</div>
+					<div class="form-group">
+						<label for="phone">Phone number</label>
+						<input type="tel" id="phone" name="phone" />
+					</div>
+					<div class="form-group">
+						<label for="message">Message *</label>
+						<textarea id="message" name="message" rows="5" required></textarea>
+					</div>
+					<button type="submit" class="submit-button">Contact Us</button>
+				</form>
 			</div>
 		</section>
 	</main>
 
 	<footer class="footer">
 		<div class="container">
-			<p>&copy; 2025 Mirko Schernickau. Alle Rechte vorbehalten.</p>
+			<p>schernickau.de</p>
+			<p>&copy; 2025 schernickau.de</p>
 		</div>
 	</footer>
 </Layout>
@@ -125,32 +204,61 @@ import Navigation from '../components/Navigation.astro';
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: rgba(0, 0, 0, 0.3);
+		background: rgba(0, 0, 0, 0.4);
 		z-index: 1;
 	}
 
 	.hero-content {
 		position: relative;
 		z-index: 2;
+		max-width: 800px;
+		padding: 2rem;
 	}
 
 	.hero-content h1 {
 		font-size: 3.5rem;
-		margin-bottom: 1rem;
+		margin-bottom: 1.5rem;
+		font-weight: 700;
+		line-height: 1.2;
 	}
 
 	.hero-content p {
-		font-size: 1.5rem;
-		opacity: 0.9;
+		font-size: 1.25rem;
+		opacity: 0.95;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	.cta-button {
+		display: inline-block;
+		padding: 1rem 2.5rem;
+		background-color: #ffffff;
+		color: #000000;
+		text-decoration: none;
+		font-weight: 600;
+		border-radius: 4px;
+		transition: all 0.3s ease;
+	}
+
+	.cta-button:hover {
+		background-color: #f0f0f0;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 	}
 
 	.section {
 		padding: 5rem 0;
-		min-height: 60vh;
+		min-height: 50vh;
+		background-color: #ffffff;
+	}
+
+	.section.bg-dark {
+		background-color: #1a1a1a;
+		color: #ffffff;
 	}
 
 	.section.bg-light {
-		background-color: var(--bg-light);
+		background-color: #f8f9fa;
 	}
 
 	.container {
@@ -162,8 +270,126 @@ import Navigation from '../components/Navigation.astro';
 	.section h2 {
 		font-size: 2.5rem;
 		margin-bottom: 2rem;
-		color: var(--primary-color);
+		color: inherit;
 		text-align: center;
+		font-weight: 700;
+	}
+
+	.section-intro {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		max-width: 900px;
+		margin: 0 auto 3rem;
+		color: #666;
+		text-align: center;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.service-card {
+		background-color: #f8f9fa;
+		padding: 0;
+		border-radius: 8px;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.service-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	}
+
+	.service-image {
+		width: 100%;
+		height: 250px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.service-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.service-card:hover .service-image img {
+		transform: scale(1.05);
+	}
+
+	.service-card h3 {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		color: #1a1a1a;
+		padding: 1.5rem 2rem 0;
+	}
+
+	.service-card p {
+		color: #666;
+		line-height: 1.6;
+		margin-bottom: 1rem;
+		padding: 0 2rem;
+	}
+
+	.service-tag {
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		background-color: #1a1a1a;
+		color: #ffffff;
+		border-radius: 4px;
+		font-size: 0.875rem;
+		font-weight: 600;
+		margin: 0 2rem 2rem;
+	}
+
+	.gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	.gallery-item {
+		aspect-ratio: 4 / 3;
+		overflow: hidden;
+		border-radius: 8px;
+	}
+
+	.gallery-placeholder {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #ffffff;
+		text-align: center;
+		padding: 1rem;
+		font-size: 0.9rem;
+		opacity: 0.8;
+	}
+
+	.video-section-content {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.video-section-content h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.video-subtitle {
+		font-size: 1.25rem;
+		color: #666;
 	}
 
 	.content {
@@ -171,13 +397,74 @@ import Navigation from '../components/Navigation.astro';
 		line-height: 1.8;
 		max-width: 800px;
 		margin: 0 auto;
+		text-align: center;
+	}
+
+	.contact-form {
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+
+	.form-group {
+		margin-bottom: 1.5rem;
+	}
+
+	.form-group label {
+		display: block;
+		margin-bottom: 0.5rem;
+		font-weight: 600;
+		color: #1a1a1a;
+	}
+
+	.form-group input,
+	.form-group textarea {
+		width: 100%;
+		padding: 0.75rem;
+		border: 2px solid #e0e0e0;
+		border-radius: 4px;
+		font-size: 1rem;
+		font-family: inherit;
+		transition: border-color 0.3s ease;
+	}
+
+	.form-group input:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: #1a1a1a;
+	}
+
+	.submit-button {
+		width: 100%;
+		padding: 1rem 2rem;
+		background-color: #1a1a1a;
+		color: #ffffff;
+		border: none;
+		border-radius: 4px;
+		font-size: 1rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+
+	.submit-button:hover {
+		background-color: #333333;
 	}
 
 	.footer {
-		background-color: var(--primary-color);
+		background-color: #1a1a1a;
 		color: white;
-		padding: 2rem 0;
+		padding: 3rem 0;
 		text-align: center;
+	}
+
+	.footer p {
+		margin: 0.5rem 0;
+	}
+
+	.footer p:first-child {
+		font-size: 1.25rem;
+		font-weight: 600;
 	}
 
 	@media (max-width: 768px) {
@@ -186,7 +473,7 @@ import Navigation from '../components/Navigation.astro';
 		}
 
 		.hero-content p {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 		}
 
 		.section {
@@ -197,8 +484,20 @@ import Navigation from '../components/Navigation.astro';
 			font-size: 2rem;
 		}
 
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.gallery-grid {
+			grid-template-columns: 1fr;
+		}
+
 		.container {
 			padding: 0 1rem;
+		}
+
+		.section-intro {
+			font-size: 1rem;
 		}
 	}
 </style>
