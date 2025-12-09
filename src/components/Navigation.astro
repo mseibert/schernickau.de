@@ -10,7 +10,7 @@ const navItems = [
 <nav class="navigation" id="navigation">
 	<div class="nav-container">
 		<div class="logo">
-			<a href="#home">schernickau.de</a>
+			<a href="#home">schernickau //</a>
 		</div>
 		<ul class="nav-menu" id="nav-menu">
 			{navItems.map((item) => (
@@ -62,16 +62,16 @@ const navItems = [
 		top: 0;
 		left: 0;
 		right: 0;
-		background-color: #000000;
+		background-color: #ffffff;
 		backdrop-filter: blur(10px);
-		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 		z-index: 1000;
 		transition: all 0.3s ease;
 	}
 
 	.navigation.scrolled {
-		background-color: #000000;
-		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+		background-color: #ffffff;
+		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 	}
 
 	.nav-container {
@@ -86,13 +86,14 @@ const navItems = [
 	.logo a {
 		font-size: 1.5rem;
 		font-weight: bold;
-		color: #ffffff;
+		color: #000000;
 		text-decoration: none;
 		transition: color 0.3s;
+		font-family: var(--font-instrument-sans);
 	}
 
 	.logo a:hover {
-		color: #cccccc;
+		color: #2b5d59;
 	}
 
 	.nav-menu {
@@ -103,7 +104,7 @@ const navItems = [
 	}
 
 	.nav-link {
-		color: #ffffff;
+		color: #000000;
 		text-decoration: none;
 		font-weight: 500;
 		transition: color 0.3s;
@@ -111,7 +112,7 @@ const navItems = [
 	}
 
 	.nav-link:hover {
-		color: #cccccc;
+		color: #2b5d59;
 	}
 
 	.nav-link::after {
@@ -121,7 +122,7 @@ const navItems = [
 		left: 0;
 		width: 0;
 		height: 2px;
-		background-color: #ffffff;
+		background-color: #2b5d59;
 		transition: width 0.3s;
 	}
 
@@ -142,7 +143,7 @@ const navItems = [
 	.menu-toggle span {
 		width: 25px;
 		height: 3px;
-		background-color: #ffffff;
+		background-color: #000000;
 		transition: all 0.3s;
 	}
 
@@ -168,11 +169,11 @@ const navItems = [
 			top: 70px;
 			left: -100%;
 			flex-direction: column;
-			background-color: #000000;
+			background-color: #ffffff;
 			width: 100%;
 			text-align: center;
 			transition: left 0.3s;
-			box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
+			box-shadow: 0 10px 27px rgba(0, 0, 0, 0.15);
 			padding: 2rem 0;
 			gap: 1.5rem;
 		}
