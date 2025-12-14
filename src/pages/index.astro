@@ -28,7 +28,7 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 		<!-- Doku/Reportage -->
 		<section id="doku-reportage" class="section">
 			<div class="container">
-				<h2>Doku/Reportage</h2>
+				<h2>Doku / Reportage</h2>
 				<div class="carousel" data-carousel="doku">
 					<div class="carousel-container">
 						<div class="carousel-slide active">
@@ -55,7 +55,7 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 		<!-- Image/Musik -->
 		<section id="image-musik" class="section bg-dark">
 			<div class="container">
-				<h2>Image/Musik</h2>
+				<h2>Image / Musik</h2>
 				<div class="carousel" data-carousel="image">
 					<div class="carousel-container">
 						<div class="carousel-slide active">
@@ -91,33 +91,6 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 			</div>
 		</section>
 
-		<!-- Drohne -->
-		<section id="drohne" class="section">
-			<div class="container">
-				<h2>Drohne</h2>
-				<div class="carousel" data-carousel="drohne">
-					<div class="carousel-container">
-						<div class="carousel-slide active">
-							<img src={drohneImage.src} alt="Drohne Bild 1" />
-						</div>
-						<div class="carousel-slide">
-							<img src={drohneImage.src} alt="Drohne Bild 2" />
-						</div>
-						<div class="carousel-slide">
-							<img src={drohneImage.src} alt="Drohne Bild 3" />
-						</div>
-					</div>
-					<div class="carousel-controls">
-						<button class="carousel-btn prev" aria-label="Vorheriges Bild">‹</button>
-						<span class="carousel-counter">
-							<span class="current">1</span> / <span class="total">3</span>
-						</span>
-						<button class="carousel-btn next" aria-label="Nächstes Bild">›</button>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<!-- Produktion -->
 		<section id="produktion" class="section video-section">
 			<div class="container">
@@ -127,23 +100,12 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 				</div>
 			</div>
 		</section>
-		<div class="video-banner" style={`background-image: url(${kameraBanner.src})`}></div>
-		<!-- About/Description -->
-		<section class="section bg-dark">
-			<div class="container">
-				<h2>Capturing Moments with Precision</h2>
-				<div class="content">
-					<p>
-						Discover the art of storytelling through the lens of Schernickau.de, your expert portfolio cameraman. Experience dynamic visuals that bring your vision to life. Elevate your portfolio with professional video services tailored to your needs.
-					</p>
-				</div>
-			</div>
-		</section>
+		
 
 		<!-- Info/Vita -->
 		<section id="info-vita" class="section">
 			<div class="container">
-				<h2>Info/Vita</h2>
+				<h2>Info / Vita</h2>
 				<div class="info-vita-content">
 					<div class="info-vita-text">
 						<p>
@@ -224,7 +186,7 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 
 <style>
 	main {
-		margin-top: 70px; /* Space for fixed navigation */
+		margin-top: 0;
 	}
 
 	.hero {
@@ -236,10 +198,12 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 		color: white;
 		text-align: center;
 		overflow: hidden;
+		margin-top: 0;
+		padding-top: 140px; /* Extra space below navigation */
 	}
 
 	.video-background {
-		position: absolute;
+		position: absolute;	
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -249,10 +213,9 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 
 	.video-iframe {
 		position: absolute;
-		top: 50%;
 		left: 50%;
 		width: 100vw;
-		height: 100vh;
+		height: 50vh;
 		transform: translate(-50%, -50%);
 		pointer-events: none;
 	}
