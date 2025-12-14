@@ -1,17 +1,22 @@
 ---
+import logoImage from '../assets/logo.png';
+
 const navItems = [
-	{ name: 'Services', href: '#services' },
-	{ name: 'Gallery', href: '#gallery' },
-	{ name: 'Video', href: '#video' },
-	{ name: 'Contact Us', href: '#contact' },
+	{ name: 'Doku/Reportage', href: '#doku-reportage' },
+	{ name: 'Image/Musik', href: '#image-musik' },
+	{ name: 'Drohne', href: '#drohne' },
+	{ name: 'Produktion', href: '#produktion' },
+	{ name: 'Info/Vita', href: '#info-vita' },
 ];
 ---
 
 <nav class="navigation" id="navigation">
+	<div class="logo">
+		<a href="#home">
+			<img src={logoImage.src} alt="schernickau.de" class="logo-image" />
+		</a>
+	</div>
 	<div class="nav-container">
-		<div class="logo">
-			<a href="#home">schernickau //</a>
-		</div>
 		<ul class="nav-menu" id="nav-menu">
 			{navItems.map((item) => (
 				<li>
@@ -67,6 +72,10 @@ const navItems = [
 		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 		z-index: 1000;
 		transition: all 0.3s ease;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 2rem;
 	}
 
 	.navigation.scrolled {
@@ -77,23 +86,33 @@ const navItems = [
 	.nav-container {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 1rem 2rem;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 		align-items: center;
+		flex: 1;
+	}
+
+	.logo {
+		position: absolute;
+		left: 2rem;
+        top: 3px;
+		z-index: 1001;
 	}
 
 	.logo a {
-		font-size: 1.5rem;
-		font-weight: bold;
-		color: #000000;
+		display: inline-block;
 		text-decoration: none;
-		transition: color 0.3s;
-		font-family: var(--font-instrument-sans);
+		transition: opacity 0.3s;
 	}
 
 	.logo a:hover {
-		color: #2b5d59;
+		opacity: 0.8;
+	}
+
+	.logo-image {
+		height: 60px;
+		width: auto;
+		display: block;
 	}
 
 	.nav-menu {

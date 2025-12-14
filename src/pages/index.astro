@@ -15,89 +15,115 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 		<section id="home" class="hero">
 			<div class="video-background">
 				<iframe
-					src="https://player.vimeo.com/video/806311047?autoplay=1&loop=1&muted=1&background=1&controls=0&playsinline=1"
+					src="https://player.vimeo.com/video/1146365162?autoplay=1&loop=1&muted=1&background=1&controls=0&playsinline=1"
 					frameborder="0"
 					allow="autoplay; fullscreen; picture-in-picture"
 					allowfullscreen
 					class="video-iframe"
 				></iframe>
 			</div>
-			<div class="hero-overlay"></div>
-			<div class="hero-content">
-				<h1>Capturing Stories Through the Lens</h1>
-				<p>Welcome to the portfolio of a dedicated cameraman. Explore stunning visuals and storytelling that bring moments to life. Let's create captivating content together.</p>
-				<a href="#contact" class="cta-button">Contact Us</a>
-			</div>
+			
 		</section>
 
-		<!-- Services -->
-		<section id="services" class="section">
+		<!-- Doku/Reportage -->
+		<section id="doku-reportage" class="section">
 			<div class="container">
-				<h2>Unsere Dienstleistungen</h2>
-				<p class="section-intro">
-					When Ryan and Monica realized that they could watch their wedding ceremony on the livestream on the church's Youtube channel, everything else faded away as they jointly looked at Ryan's cellphone, mesmerized, holding each other during the wedding reception in the gym of the church. It was a perfect way to end a perfect day: an in-love couple enjoying the immediate playback of the events that had just transpired mere moments ago. As their photographer, I was excited to capture the moment they were entranced by their vows on the tiny screen. August 16, 2025, Pocatello, Idaho, USA.
-				</p>
-				<div class="services-grid">
-					<div class="service-card">
-						<div class="service-image">
-							<img src={hochzeitImage.src} alt="Hochzeitsvideografie" />
+				<h2>Doku/Reportage</h2>
+				<div class="carousel" data-carousel="doku">
+					<div class="carousel-container">
+						<div class="carousel-slide active">
+							<img src={hochzeitImage.src} alt="Doku/Reportage Bild 1" />
 						</div>
-						<h3>Hochzeitsvideografie</h3>
-						<p>Emotionale Hochzeitsvideos, die die schönsten Augenblicke Ihres großen Tages einfangen.</p>
-						<div class="service-tag">Steadicam</div>
+						<div class="carousel-slide">
+							<img src={hochzeitImage.src} alt="Doku/Reportage Bild 2" />
+						</div>
+						<div class="carousel-slide">
+							<img src={hochzeitImage.src} alt="Doku/Reportage Bild 3" />
+						</div>
 					</div>
-					<div class="service-card">
-						<div class="service-image">
-							<img src={musikImage.src} alt="Musikvideos" />
-						</div>
-						<h3>Musikvideos</h3>
-						<p>Innovative Musikvideos, die die Persönlichkeit und den Stil des Künstlers unterstreichen.</p>
-						<div class="service-tag">Flying DJI Mini</div>
-					</div>
-					<div class="service-card">
-						<div class="service-image">
-							<img src={drohneImage.src} alt="Luftaufnahmen mit Drohne" />
-						</div>
-						<h3>Luftaufnahmen mit Drohne</h3>
-						<p>Beeindruckende Luftaufnahmen, die einzigartige Perspektiven und Panoramaaufnahmen bieten.</p>
+					<div class="carousel-controls">
+						<button class="carousel-btn prev" aria-label="Vorheriges Bild">‹</button>
+						<span class="carousel-counter">
+							<span class="current">1</span> / <span class="total">3</span>
+						</span>
+						<button class="carousel-btn next" aria-label="Nächstes Bild">›</button>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Gallery -->
-		<section id="gallery" class="section bg-dark">
+		<!-- Image/Musik -->
+		<section id="image-musik" class="section bg-dark">
 			<div class="container">
-				<h2>Gallery</h2>
-				<div class="gallery-grid">
-					<div class="gallery-item">
-						<div class="gallery-placeholder">selective focus photo of man holding black camera</div>
+				<h2>Image/Musik</h2>
+				<div class="carousel" data-carousel="image">
+					<div class="carousel-container">
+						<div class="carousel-slide active">
+							<div class="carousel-video-wrapper">
+								<iframe
+									src="https://player.vimeo.com/video/786264706?autoplay=0&loop=0&muted=0&controls=1&playsinline=1"
+									frameborder="0"
+									allow="autoplay; fullscreen; picture-in-picture"
+									allowfullscreen
+									class="carousel-video"
+								></iframe>
+							</div>
+							<div class="carousel-video-info">
+								<h4 class="carousel-video-title">Titel des Videos</h4>
+								<p class="carousel-video-description">Kurzbeschreibung des Videos</p>
+							</div>
+						</div>
+						<div class="carousel-slide">
+							<img src={musikImage.src} alt="Image/Musik Bild 2" />
+						</div>
+						<div class="carousel-slide">
+							<img src={musikImage.src} alt="Image/Musik Bild 3" />
+						</div>
 					</div>
-					<div class="gallery-item">
-						<div class="gallery-placeholder">Empty road</div>
-					</div>
-					<div class="gallery-item">
-						<div class="gallery-placeholder">A cameraman working during the pandemic days.</div>
-					</div>
-					<div class="gallery-item">
-						<div class="gallery-placeholder">a man standing in front of a camera</div>
-					</div>
-					<div class="gallery-item">
-						<div class="gallery-placeholder">man in red crew neck t-shirt sitting on brown wooden dock during daytime</div>
-					</div>
-					<div class="gallery-item">
-						<div class="gallery-placeholder">a man holding a camera and a tripod</div>
+					<div class="carousel-controls">
+						<button class="carousel-btn prev" aria-label="Vorheriges Bild">‹</button>
+						<span class="carousel-counter">
+							<span class="current">1</span> / <span class="total">3</span>
+						</span>
+						<button class="carousel-btn next" aria-label="Nächstes Bild">›</button>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Video Section -->
-		<section id="video" class="section video-section">
+		<!-- Drohne -->
+		<section id="drohne" class="section">
+			<div class="container">
+				<h2>Drohne</h2>
+				<div class="carousel" data-carousel="drohne">
+					<div class="carousel-container">
+						<div class="carousel-slide active">
+							<img src={drohneImage.src} alt="Drohne Bild 1" />
+						</div>
+						<div class="carousel-slide">
+							<img src={drohneImage.src} alt="Drohne Bild 2" />
+						</div>
+						<div class="carousel-slide">
+							<img src={drohneImage.src} alt="Drohne Bild 3" />
+						</div>
+					</div>
+					<div class="carousel-controls">
+						<button class="carousel-btn prev" aria-label="Vorheriges Bild">‹</button>
+						<span class="carousel-counter">
+							<span class="current">1</span> / <span class="total">3</span>
+						</span>
+						<button class="carousel-btn next" aria-label="Nächstes Bild">›</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Produktion -->
+		<section id="produktion" class="section video-section">
 			<div class="container">
 				<div class="video-section-content">
-					<h2>Capturing moments, crafting your story with every frame.</h2>
-					<p class="video-subtitle">Discover your vision today!</p>
+					<h2>Produktion</h2>
+					<p class="video-subtitle">Professionelle Videoproduktion für Ihre Projekte.</p>
 				</div>
 			</div>
 		</section>
@@ -114,29 +140,26 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 			</div>
 		</section>
 
-		<!-- Contact -->
-		<section id="contact" class="section">
+		<!-- Info/Vita -->
+		<section id="info-vita" class="section">
 			<div class="container">
-				<h2>Contact Us</h2>
-				<form class="contact-form">
-					<div class="form-group">
-						<label for="email">Email address *</label>
-						<input type="email" id="email" name="email" required />
+				<h2>Info/Vita</h2>
+				<div class="info-vita-content">
+					<div class="info-vita-text">
+						<p>
+							Als erfahrener Kameramann und Director of Photography bringe ich Geschichten durch die Linse zum Leben. Mit einem Auge für Details und einer Leidenschaft für visuelles Storytelling schaffe ich Bilder, die Emotionen wecken und Botschaften kraftvoll vermitteln.
+						</p>
+						<p>
+							Meine Expertise umfasst Dokumentationen, Reportagen, Musikvideos und professionelle Produktionen. Jedes Projekt ist für mich eine neue Herausforderung, die ich mit Kreativität, technischem Know-how und einem klaren Fokus auf Qualität angehe.
+						</p>
+						<p>
+							Von der Konzeption bis zur finalen Umsetzung begleite ich Projekte mit Engagement und Professionalität. Lassen Sie uns gemeinsam Ihre Vision in bewegte Bilder verwandeln.
+						</p>
 					</div>
-					<div class="form-group">
-						<label for="name">Name *</label>
-						<input type="text" id="name" name="name" required />
+					<div class="info-vita-image">
+						<img src={musikImage.src} alt="Kameramann" />
 					</div>
-					<div class="form-group">
-						<label for="phone">Phone number</label>
-						<input type="tel" id="phone" name="phone" />
-					</div>
-					<div class="form-group">
-						<label for="message">Message *</label>
-						<textarea id="message" name="message" rows="5" required></textarea>
-					</div>
-					<button type="submit" class="submit-button">Contact Us</button>
-				</form>
+				</div>
 			</div>
 		</section>
 	</main>
@@ -148,6 +171,56 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 		</div>
 	</footer>
 </Layout>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const carousels = document.querySelectorAll('.carousel');
+		
+		carousels.forEach((carousel) => {
+			const slides = carousel.querySelectorAll('.carousel-slide');
+			const prevBtn = carousel.querySelector('.carousel-btn.prev');
+			const nextBtn = carousel.querySelector('.carousel-btn.next');
+			const currentSpan = carousel.querySelector('.carousel-counter .current');
+			const totalSpan = carousel.querySelector('.carousel-counter .total');
+			
+			let currentIndex = 0;
+			const totalSlides = slides.length;
+			
+			// Set total count
+			if (totalSpan) {
+				totalSpan.textContent = String(totalSlides);
+			}
+			
+			const showSlide = (index: number) => {
+				slides.forEach((slide, i) => {
+					slide.classList.toggle('active', i === index);
+				});
+				
+				if (currentSpan) {
+					currentSpan.textContent = String(index + 1);
+				}
+			};
+			
+			const nextSlide = () => {
+				currentIndex = (currentIndex + 1) % totalSlides;
+				showSlide(currentIndex);
+			};
+			
+			const prevSlide = () => {
+				currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+				showSlide(currentIndex);
+			};
+			
+			if (nextBtn) {
+				nextBtn.addEventListener('click', nextSlide);
+			}
+			
+			if (prevBtn) {
+				prevBtn.addEventListener('click', prevSlide);
+			}
+		});
+	});
+</script>
 
 <style>
 	main {
@@ -278,8 +351,9 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 		font-size: 2.5rem;
 		margin-bottom: 2rem;
 		color: inherit;
-		text-align: center;
+		text-align: left;
 		font-weight: 700;
+		padding-left: 0;
 	}
 
 	.section-intro {
@@ -384,14 +458,15 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 	}
 
 	.video-section-content {
-		text-align: center;
+		text-align: left;
 		max-width: 800px;
-		margin: 0 auto;
+		margin: 0;
 	}
 
 	.video-section-content h2 {
 		font-size: 2.5rem;
 		margin-bottom: 1rem;
+		text-align: left;
 	}
 
 	.video-subtitle {
@@ -425,6 +500,50 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 		max-width: 800px;
 		margin: 0 auto;
 		text-align: center;
+	}
+
+	.info-vita-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: center;
+		margin-top: 2rem;
+	}
+
+	.info-vita-text {
+		font-size: 1.1rem;
+		line-height: 1.8;
+	}
+
+	.info-vita-text p {
+		margin-bottom: 1.5rem;
+	}
+
+	.info-vita-text p:last-child {
+		margin-bottom: 0;
+	}
+
+	.info-vita-image {
+		width: 100%;
+	}
+
+	.info-vita-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+		object-fit: cover;
+		border-radius: 8px;
+	}
+
+	@media (max-width: 768px) {
+		.info-vita-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.info-vita-image {
+			order: -1;
+		}
 	}
 
 	.contact-form {
@@ -476,6 +595,123 @@ import kameraBanner from '../assets/kamera-banner.jpg';
 
 	.submit-button:hover {
 		background-color: #1e423f;
+	}
+
+	.carousel {
+		position: relative;
+		width: 100%;
+		margin-top: 2rem;
+	}
+
+	.carousel-container {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.carousel-slide {
+		display: none;
+		width: 100%;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.carousel-slide.active {
+		display: block;
+		opacity: 1;
+	}
+
+	.carousel-slide img {
+		width: 100%;
+		height: auto;
+		display: block;
+		object-fit: cover;
+		max-height: 600px;
+	}
+
+	.carousel-video-wrapper {
+		position: relative;
+		width: 100%;
+		padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+		overflow: hidden;
+		max-height: 600px;
+	}
+
+	.carousel-video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+
+	.carousel-video-info {
+		margin-top: 1.5rem;
+		padding: 0 1rem;
+	}
+
+	.carousel-video-title {
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+		color: inherit;
+		font-family: var(--font-instrument-sans);
+	}
+
+	.carousel-video-description {
+		font-size: 1rem;
+		line-height: 1.6;
+		color: inherit;
+		opacity: 0.9;
+	}
+
+	.carousel-controls {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		margin-top: 1.5rem;
+	}
+
+	.carousel-btn {
+		background: transparent;
+		border: 2px solid #2b5d59;
+		color: #2b5d59;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		font-size: 2rem;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease;
+		line-height: 1;
+		padding: 0;
+	}
+
+	.carousel-btn:hover {
+		background-color: #2b5d59;
+		color: #ffffff;
+		border-color: #2b5d59;
+	}
+
+	.section.bg-dark .carousel-btn {
+		border-color: #ffffff;
+		color: #ffffff;
+	}
+
+	.section.bg-dark .carousel-btn:hover {
+		background-color: #ffffff;
+		color: #2b5d59;
+		border-color: #ffffff;
+	}
+
+	.carousel-counter {
+		font-size: 1rem;
+		font-weight: 500;
+		color: inherit;
 	}
 
 	.footer {
